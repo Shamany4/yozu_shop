@@ -1,0 +1,105 @@
+@import "reset"
+$active: #4447ff
+body
+  font-family: "Montserrat", sans-serif
+  letter-spacing: 1px
+.container
+  width: 1170px
+  margin: 0 auto
+.basket
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 50px
+  &-info
+    display: flex
+    justify-content: center
+    margin-bottom: 25px
+    &_user
+      margin-left: 35px
+  &__img
+    max-width: 20%
+  &__title
+    font-size: 25px
+    margin: 25px 0
+    font-weight: 700
+  &__info
+    font-size: 18px
+    margin-top: 10px
+  &-block
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-desc
+    display: flex
+    align-items: center
+    &__title
+      font-size: 20px
+      font-weight: 700
+      margin-left: 10px
+    &__img
+      width: 50px
+  &-card
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 150px
+    width: 750px
+    border-bottom: 1px solid rgba(#000000, 0.1)
+    margin-bottom: 20px
+    transition: 0.3s
+    &:hover
+      border-bottom: 1px solid rgba(#000000, 1)
+      transition: 0.3s
+  &-counter
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__count
+      color: $active
+      font-weight: 700
+      margin-top: 15px
+    &__price
+      color: $active
+  &__close
+    text-decoration: none
+    font-size: 35px
+    &:hover
+      color: red
+  &-total
+    display: flex
+    justify-content: center
+    margin: 25px 0
+    &__count
+      margin-left: 25px
+      color: $active
+      font-weight: 700
+  &-button
+    display: flex
+    align-items: center
+    &__plus, &__minus
+      padding: 2px 5px
+      border: 1px solid $active
+      font-size: 30px
+      &:hover
+        background: $active
+        color: #ffffff
+        cursor: pointer
+    &__minus
+      margin-left: 15px
+      padding: 2px 8px
+  &__btn_buy
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 45px
+    width: 175px
+    border: 1px solid $active
+    transition: 0.3s
+    margin-top: 25px
+    &:hover
+      background: $active
+      cursor: pointer
+      color: #ffffff
+      transition: 0.3s

@@ -1,0 +1,500 @@
+@import "_reset.sass"
+// Основные настройки
+$active: #4447ff
+body
+  font-family: 'Montserrat', sans-serif
+  letter-spacing: 1px
+.container
+  width: 1170px
+  margin: 0 auto
+// Главная секция
+.top-bar
+  background: #4447ff
+  &-row
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+.city
+  &__name
+    color: #ffffff
+    font-weight: 700
+.login
+  display: flex
+  &__icon
+    i
+      color: #ffffff
+      margin-left: 10px
+  &__btn
+    text-decoration: none
+    color: rgba(#ffffff, 0.7)
+    margin-left: 10px
+    &:first-child
+      margin-left: 0
+    &:hover
+      color: rgba(#ffffff, 1)
+      transition: 0.2s
+.form-block
+  position: fixed
+  top: 0
+  right: 0
+  height: 100%
+  width: 40%
+  background: #ffffff
+  box-shadow: 15px 0 20px rgba(#000000, 0.7)
+  transform: translateX(100%)
+  transition: 0.3s
+  z-index: 10
+  &_active
+    transform: translateX(0)
+    transition: 0.3s
+.form-block-auth
+  position: fixed
+  top: 0
+  right: 0
+  height: 100%
+  width: 40%
+  background: #ffffff
+  box-shadow: 15px 0 20px rgba(#000000, 0.7)
+  transform: translateX(100%)
+  transition: 0.3s
+  z-index: 10
+  &_active
+    transform: translateX(0)
+    transition: 0.3s
+.form
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100%
+  position: relative
+  &__close
+    position: absolute
+    top: 30px
+    left: 30px
+    text-decoration: none
+    font-size: 40px
+  &__input
+    width: 80%
+    height: 30px
+    border: none
+    border-bottom: 1px solid rgba($active, 0.5)
+    margin-top: 40px
+    transition: 0.3s
+    padding-left: 1px
+    &:hover
+      border-bottom: 1px solid rgba($active, 1)
+      transition: 0.3s
+    &:focus
+      border-bottom: 1px solid rgba($active, 1)
+      outline: none
+  &__btn
+    height: 40px
+    width: 150px
+    background: none
+    border: 1px solid $active
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 40px
+    transition: 0.3s
+    &:hover
+      background: $active
+      color: #ffffff
+      cursor: pointer
+      transition: 0.3s
+.navigation
+  &-block
+    margin-top: 30px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: space-between
+.logo
+  &__text
+    font-size: 50px
+    text-transform: uppercase
+    font-weight: 900
+    color: $active
+    text-decoration: none
+.search
+  display: flex
+  &__input
+    height: 30px
+    width: 450px
+    padding-left: 10px
+    border: 1px solid rgba($active, 0.4)
+    font-family: 'Montserrat', sans-serif
+    &:focus
+      outline: none
+  &__btn
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 15px
+    text-decoration: none
+    height: 32px
+    background: $active
+    color: #ffffff
+    width: 100px
+    border: 1px solid rgba($active, 0.4)
+    &:hover
+      text-decoration: underline
+.basket
+  display: flex
+  position: relative
+  &__name
+    margin-left: 10px
+    text-decoration: none
+    color: #000000
+    display: flex
+    align-items: center
+    &_count
+      color: $active
+      margin-left: 5px
+      font-weight: bold
+      font-size: 20px
+    &:hover
+      text-decoration: underline
+.hidden
+  z-index: 1
+  position: absolute
+  // top: 40px
+  right: 0
+  height: auto
+  width: 33%
+  background: #ffffff
+  box-shadow: 0 0 30px rgba(#000000, 0.15)
+  transform: translateY(-250%)
+  transition: 0.3s
+  &-desc
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    width: 60%
+    &__text
+      line-height: 25px
+      margin-bottom: 10px
+  &_active
+    top: 0
+    transform: translateY(0)
+    transition: 0.3s
+  &_close
+    font-size: 55px
+    position: absolute
+    top: 5px
+    right: 15px
+    text-decoration: none
+    color: #000000
+    &:hover
+      color: red
+    &:focus
+      outline: none
+  &-block
+    display: flex
+    flex-direction: column
+    margin-top: 50px
+  &-card
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding-bottom: 15px
+    padding-top: 15px
+    border-bottom: 1px dashed rgba(#000000, 0.1)
+    margin-bottom: 20px
+    transition: 0.3s
+    &:hover
+      border-bottom: 1px dashed rgba(#000000, 1)
+      transition: 0.3s
+    &__oform
+      display: flex
+      height: 55px
+      width: 250px
+      margin: 15px auto
+      border: 1px solid $active
+      text-decoration: none
+      justify-content: center
+      align-items: center
+      transition: 0.3s
+      &:hover
+        background: $active
+        color: #ffffff
+        transition: 0.3s
+    &-desc
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__img
+      width: 40px
+      margin-bottom: 20px
+    &__title
+      font-weight: 700
+      font-size: 18px
+    &__price
+      font-weight: 700
+      color: $active
+      font-size: 20px
+    &__close
+      font-size: 30px
+      text-decoration: none
+  &-check
+    display: flex
+    flex-direction: column
+    align-items: center
+.total
+  display: flex
+  justify-content: center
+  margin-top: 20px
+  margin-bottom: 20px
+  &__title
+    margin-right: 15px
+    font-weight: 700
+  &__count
+    color: $active
+    font-weight: 700
+.counter
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__count
+    font-weight: 700
+    font-size: 20px
+    margin-top: 15px
+  &-edit
+    display: flex
+    margin-top: 15px
+    &__plus, &__minus
+      height: 25px
+      width: 25px
+      background: none
+      border: 1px solid rgba($active, 0.5)
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: 0.3s
+      &:focus
+        outline: none
+      &:hover
+        background: $active
+        color: #ffffff
+        transition: 0.3s
+        cursor: pointer
+    &__plus
+      width: 26px
+      margin-right: 10px
+.main
+  margin-top: 50px
+  display: flex
+  justify-content: space-between
+.menu
+  &__ul
+    display: flex
+    flex-direction: column
+  &__item
+    margin-bottom: 15px
+  &__btn
+    border: 1px solid $active
+    height: 50px
+    width: 200px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    color: #000000
+    transition: 0.2s
+    &:hover
+      background: $active
+      color: #ffffff
+      transition: 0.2s
+.card-block
+  width: 80%
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.card
+  margin-bottom: 20px
+  width: 100%
+  height: 250px
+  display: flex
+  border-radius: 2px
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+  border: 1px solid rgba($active, 0.6)
+  transition: 0.3s
+  &:hover
+    border: 1px solid rgba($active, 1)
+    transition: 0.3s
+  &__img
+    width: 10%
+  &__title
+    font-weight: 700
+    font-size: 25px
+    margin-bottom: 5px
+  &__article
+    font-size: 10px
+    margin-top: 25px
+    font-style: italic
+  &-desc
+    width: 450px
+  &__text
+    margin-top: 15px
+    line-height: 25px
+  &-cost
+    text-align: center
+  &__price
+    font-size: 30px
+    font-weight: 700
+    color: $active
+  &__btn
+    margin-top: 20px
+    height: 40px
+    width: 175px
+    border: 1px solid $active
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    color: #000000
+    transition: 0.3s
+    &:hover
+      background: $active
+      color: #ffffff
+      transition: 0.3s
+.empty
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__img
+    max-width: 50%
+    margin: 0 auto 35px auto
+
+.login
+  position: relative
+  &__title
+    color: #ffffff
+    &:hover
+      text-decoration: underline
+      cursor: pointer
+.wrap-login
+  margin: 0 auto
+  width: 90%
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+.hidden-login
+  position: absolute
+  top: 28px
+  right: 0
+  height: 150px
+  background: #ffffff
+  z-index: 2
+  width: 250px
+  box-shadow: 0 10px 35px rgba(#000000, 0.2)
+  transform: translateY(-250%)
+  transition: 0.3s
+  &_active
+    transform: translateY(0)
+    transition: 0.3s
+  &-button
+    display: flex
+    justify-content: space-between
+    &__btn
+      color: #000000
+      &:hover
+        color: $active
+.put-money
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 10
+  background: rgba(#000000, 0.8)
+  justify-content: center
+  align-items: center
+  &__desc
+    font-size: 14px
+    font-weight: 700
+  &_active
+    display: flex
+  &-block
+    height: 350px
+    width: 350px
+    background: #ffffff
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    position: relative
+    &__close
+      position: absolute
+      top: -55px
+      right: -25px
+      font-size: 55px
+      text-decoration: none
+      color: #ffffff
+      &:hover
+        color: red
+  &__input
+    height: 30px
+    padding-left: 10px
+    width: 200px
+    background: none
+    border: 1px solid rgba($active, 0.4)
+    transition: 0.3s
+    font-family: "Montserrat", sans-serif
+    letter-spacing: 1px
+    &:hover
+      border: 1px solid rgba($active, 1)
+      transition: 0.3s
+    &:focus
+      border: 1px solid rgba($active, 1)
+      outline: none
+  &__btn
+    height: 35px
+    font-family: "Montserrat", sans-serif
+    letter-spacing: 1px
+    width: 150px
+    background: none
+    border: 1px solid rgba($active, 1)
+    transition: 0.3s
+    &:hover
+      background: $active
+      cursor: pointer
+      color: #ffffff
+      transition: 0.3s
+    &:focus
+      outline: none
+.main
+  &-wrap
+    margin-top: 50px
+    display: flex
+    flex-direction: column
+  &__title
+    font-weight: bold
+    font-size: 25px
+  &__desc
+    width: 550px
+    margin-top: 15px
+    line-height: 25px
+    margin-bottom: 25px
+  &__phone
+    font-weight: 600
+    margin-bottom: 10px
+.service
+  &-block
+    display: flex
+    margin-top: 45px
+  &-card
+    text-align: center
+    &__title
+      font-weight: 600
+      font-size: 20px
+    &__desc
+      line-height: 25px
+      margin-top: 10px
